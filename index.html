@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -14,7 +15,7 @@
             <!-- here in code ,anywhere if we write data-xxxxxxxxx, that represent the custom attribute which will used later -->
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
 
-            <button data-copy>
+            <button class="copyBtn" data-copy>
                 <span data-copyMsg></span>
                 <img src="./assests/copy.svg" alt="copy" width="20" height="20">
             </button>
@@ -31,22 +32,22 @@
             <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
 
             <!-- checkboxes -->
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase">
                 <label for="uppercase">Include Uppercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase">
                 <label for="lowercase">Include Lowercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers">
                 <label for="numbers">Include Numbers</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols">
                 <label for="symbols">Include Symbols</label>
             </div>
@@ -54,7 +55,7 @@
             <!-- strength section -->
             <div class="strength-container">
                 <p>Strength</p>
-                <div data-indicator></div>
+                <div class="indicator" data-indicator></div>
             </div>
 
             <!-- generate password -->

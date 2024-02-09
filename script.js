@@ -17,6 +17,7 @@ let passwordLength=10;
 let checkCount=0;
 // set strength color to gry
 handleSlider();
+setIndicator("#ccc");
 
 
 // set passwordLength
@@ -24,10 +25,14 @@ function handleSlider(){
     inputSlider.value=passwordLength;
     lengthDisplay.innerText=passwordLength;
     // anything left?
+    const min=inputSlider.min;
+    const max=inputSlider.max;
+    inputSlider.style.backgroundSize=( (passwordLength-min)*100/(max-min))+"% 100%"
 }
 
 function setIndicator(color){
     indicator.style.backgroundColor=color;
+    indicator.style.boxShadow=`0px 0px 12px 1px ${color}`
     // shadow
 }
 
